@@ -2,6 +2,7 @@ FROM eclipse-temurin:21-jre
 LABEL maintainer="emm"
 
 WORKDIR /app
+COPY build/libs/app.jar /app/app.jar
 
 RUN apt update && apt install -y locales && \
     apt clean all && \
@@ -19,4 +20,4 @@ ENV TZ="Asia/Shanghai" \
 EXPOSE $SERVER_PORT
 CMD ["java", "-jar", "/app/app.jar"]
 
-COPY build/libs/app.jar /app/app.jar
+
