@@ -18,4 +18,11 @@ public class DemoController {
         stringStringHashMap.put("locale", locale.getLanguage());
         return stringStringHashMap;
     }
+    @GetMapping(value = "/demo/hello")
+    public Map<Object, Object> hello(Locale locale) {
+        var stringStringHashMap = new HashMap<>();
+        stringStringHashMap.put("hello", "hello");
+        stringStringHashMap.put("locale", locale.getLanguage());
+        return stringStringHashMap;
+    }
 }
