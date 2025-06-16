@@ -30,6 +30,7 @@ public class DemoController {
         var stringStringHashMap = new HashMap<>();
         stringStringHashMap.put("hello", "hello");
         stringStringHashMap.put("locale", locale.getLanguage());
+        stringStringHashMap.put("test", locale.getLanguage());
         stringStringHashMap.put("date", System.currentTimeMillis());
         return stringStringHashMap;
     }
