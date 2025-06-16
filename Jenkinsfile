@@ -37,7 +37,8 @@ pipeline {
                 cleanWs()
                 script {
                     def branchName = params.BRANCH == '自定义' ? params.CUSTOM_BRANCH : params.BRANCH
-                    git branch: branchName, credentialsId: 'git', url: 'http://172.18.18.174:3000/gitea/demo.git'
+                    git branch: branchName, credentialsId: 'github', url: 'https://github.com/comwangjiao/demo.git'//这里是直接从github当前仓库拉取的
+                    //git branch: branchName, credentialsId: 'git', url: 'http://172.18.18.174:3000/gitea/demo.git'
                 }
             }
         }
