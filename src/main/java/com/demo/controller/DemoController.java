@@ -25,4 +25,12 @@ public class DemoController {
         stringStringHashMap.put("locale", locale.getLanguage());
         return stringStringHashMap;
     }
+    @GetMapping(value = "/demo/ping")
+    public Map<Object, Object> ping(Locale locale) {
+        var stringStringHashMap = new HashMap<>();
+        stringStringHashMap.put("hello", "hello");
+        stringStringHashMap.put("locale", locale.getLanguage());
+        stringStringHashMap.put("date", System.currentTimeMillis());
+        return stringStringHashMap;
+    }
 }
