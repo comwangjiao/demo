@@ -11,13 +11,7 @@ import java.util.Map;
 @RestController
 public class DemoController {
 
-    @GetMapping(value = "/demo/test")
-    public Map<Object, Object> test(Locale locale) {
-        var stringStringHashMap = new HashMap<>();
-        stringStringHashMap.put("aa", "aaa");
-        stringStringHashMap.put("locale", locale.getLanguage());
-        return stringStringHashMap;
-    }
+
     @GetMapping(value = "/demo/ping")
     public Map<Object, Object> ping(Locale locale) {
         var stringStringHashMap = new HashMap<>();
