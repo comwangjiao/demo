@@ -18,6 +18,7 @@ public class DemoController {
         stringStringHashMap.put("locale", locale.getLanguage());
         stringStringHashMap.put("test", locale.getLanguage());
         stringStringHashMap.put("date", System.currentTimeMillis());
+        stringStringHashMap.put("date", System.currentTimeMillis());
         return stringStringHashMap;
     }
 }
